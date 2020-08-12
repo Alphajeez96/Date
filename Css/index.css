@@ -52,6 +52,15 @@ header {
 }
 
 
+/* How it works */
+
+.how__it__works h3 {
+    background: -webkit-linear-gradient(#FF3372, #FEAB3C);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
 /* Tabs test */
 
 .container {
