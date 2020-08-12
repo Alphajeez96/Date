@@ -44,7 +44,6 @@ header {
 /* hero section here */
 
 .hero-text {
-    font-size: 45px;
     color: var(--primary-font-color);
 }
 
