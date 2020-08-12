@@ -8,6 +8,38 @@
         background: linear-gradient(146.83deg, #F88584 31.37%, #FEAB3C 96.43%);
     }
     
+    .sidebar__mob {
+        background: linear-gradient(146.83deg, #F88584 31.37%, #FEAB3C 96.43%);
+        display: none;
+    }
+    
+    @media screen and (max-width: 576px) and (min-width: 275px) {
+        .sidebar__mob {
+            display: block;
+        }
+        .sidebar {
+            display: none;
+        }
+    }
+    
+    @media screen and (max-width: 768px) and (min-width: 575px) {
+        .sidebar__mob {
+            display: block;
+        }
+        .sidebar {
+            display: none;
+        }
+    }
+    
+    @media screen and (max-width: 1024px) and (min-width: 767px) {
+        .sidebar__mob {
+            display: block;
+        }
+        .sidebar {
+            display: none;
+        }
+    }
+    
     .border-s {
         border-bottom: 1px solid rgba(0, 0, 0, 0.1);
         padding: 24.5px;
@@ -38,6 +70,14 @@
     .reject {
         background: rgba(248, 133, 132, 0.4);
         color: #F88584;
+    }
+    
+    div.scroll {
+        /* background-color: green; */
+        background: linear-gradient(146.83deg, #F88584 31.37%, #FEAB3C 96.43%);
+        width: ;
+        height: 500px;
+        overflow: auto;
     }
     /* Loader */
     

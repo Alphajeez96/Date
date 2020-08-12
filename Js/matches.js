@@ -22,3 +22,51 @@ function onTabClick(event) {
 const element = document.getElementById('nav-tab');
 
 element.addEventListener('click', onTabClick, false);
+
+
+//Chat loops
+const suggestions = [{
+
+        name: "Janet Doe",
+        address: "24, Arizona",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. At vitae, at scelerisque scelerisque morbi.",
+        src: './Assets/Vectors/Ellipse 23.jpg'
+    },
+    {
+        name: "Brianna Doe",
+        address: "24, Arizona",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. At vitae, at scelerisque scelerisque morbi.",
+        src: './Assets/Vectors/Ellipse 22.png'
+
+    },
+    {
+        name: "Brian Doe",
+        address: "24, Arizona",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. At vitae, at scelerisque scelerisque morbi.",
+        src: './Assets/Vectors/Ellipse 25.png'
+    },
+    {
+        name: "John Doe",
+        address: "24, Arizona",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. At vitae, at scelerisque scelerisque morbi.",
+        src: './Assets/Vectors/Ellipse 23.jpg'
+    }
+];
+
+document.querySelector('.contents')
+    .innerHTML = suggestions.reduce((a, sg) => a +=
+        `<div class="container justify-end flex">
+        <div class="  w-3/4 mx-4 bg-white shadow-lg rounded-lg overflow-hidden">
+        <div class="sm:flex sm:items-center px-6 py-5">
+            <img class="block mx-auto sm:mx-0 sm:flex-shrink-0 rounded-full" src='${sg.src}' alt="Woman's Face">
+            <div class="mt-4 sm:mt-0 sm:ml-4 text-center sm:text-left">
+                <p class="text-xl  leading-tight">${sg.name}</p>
+                <p class="text-sm pt-2 leading-tight text-gray-600">${sg.address}</p>
+                <p class="text-sm leading-tight pt-2 ">${sg.description}</p>
+            </div>
+            <div class="mt-4 sm:mt-0 sm:ml-4 text-center sm:text-left">
+            </div>
+        </div>
+     </div>
+</div>`, ''
+    );
