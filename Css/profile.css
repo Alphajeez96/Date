@@ -18,6 +18,21 @@
         font-size: 14px;
         color: #FFDFDF;
     }
+    
+    .short__list {
+        background: rgba(60, 254, 242, 0.4);
+        color: #61E3DC;
+    }
+    
+    .favorite {
+        background: rgba(254, 171, 60, 0.4);
+        color: #FEAB3C;
+    }
+    
+    .reject {
+        background: rgba(248, 133, 132, 0.4);
+        color: #F88584;
+    }
     /* Loader */
     
     .container {
