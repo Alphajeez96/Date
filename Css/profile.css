@@ -19,6 +19,12 @@
         color: #FFDFDF;
     }
     
+    .user__card {
+        background: #FFFFFF;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+    }
+    
     .short__list {
         background: rgba(60, 254, 242, 0.4);
         color: #61E3DC;
