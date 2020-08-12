@@ -61,6 +61,14 @@ header {
 }
 
 
+/* footer here */
+
+footer {
+    background: #393E46;
+    height: 5vh;
+}
+
+
 /* Tabs test */
 
 .container {
