@@ -6,8 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./Css/profile.css" rel="stylesheet">
     <link href="./Css/index.css" rel="stylesheet">
+    <link href="./Css/chat.css" rel="stylesheet">
+
+    <!-- chats -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/4.0.2/bootstrap-material-design.css"> -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"> -->
     <!-- Tailwind here -->
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+
+    <!-- chat -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <title>Matches -</title>
 </head>
 
@@ -37,7 +47,7 @@
                         fill="#FFDFDF" />
                 </svg>
             </span>
-        <a href="#" class="mx-3 side__nav mt-1"><span>Home</span></a></span>
+        <a href="profile.html" class="mx-3 side__nav mt-1"><span>Home</span></a></span>
 
         <span class="flex items-center mt-8 px-10 hover:text-white"><span class="mr-2">
                 <svg xmlns="http://www.w3.org/2000/svg" width="22" height="14" viewBox="0 0 22 14" fill="none">
@@ -112,7 +122,7 @@
                         fill="#FFDFDF" />
                 </svg>
             </span>
-        <a href="#" class="mx-3 side__nav mt-1"><span></span></a></span>
+        <a href="profile.html" class="mx-3 side__nav mt-1"><span></span></a></span>
 
         <span class="flex items-center mt-8 px-6 hover:text-white"><span class="mr-2">
                 <svg xmlns="http://www.w3.org/2000/svg" width="22" height="14" viewBox="0 0 22 14" fill="none">
@@ -200,12 +210,59 @@
             </div>
         </div> -->
         <div class="contents scroll"></div>
-        <div class=" w-1/3 mx bg-white shadow-lg rounded-lg overflow-hidden">
+        <div class=" w-1/3   mx">
             <!-- Chat area begins here -->
+            <div class="msger chat__scroll">
+                <header class="msger-header">
+                    <div class="msger-header-title">
+                        <i class="fas fa-comment-alt"></i> SimpleChat
+                    </div>
+                    <div class="msger-header-options">
+                        <span><i class="fas fa-cog"></i></span>
+                    </div>
+                </header>
 
+                <main class="msger-chat">
+                    <div class="msg left-msg">
+                        <div class="msg-img" style="background-image: url(https://image.flaticon.com/icons/svg/327/327779.svg)"></div>
+
+                        <div class="msg-bubble">
+                            <div class="msg-info">
+                                <div class="msg-info-name">BOT</div>
+                                <div class="msg-info-time">12:45</div>
+                            </div>
+
+                            <div class="msg-text">
+                                Hi, welcome to SimpleChat! Go ahead and send me a message. 😄
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="msg right-msg">
+                        <div class="msg-img" style="background-image: url(https://image.flaticon.com/icons/svg/145/145867.svg)"></div>
+
+                        <div class="msg-bubble">
+                            <div class="msg-info">
+                                <div class="msg-info-name">Sajad</div>
+                                <div class="msg-info-time">12:46</div>
+                            </div>
+
+                            <div class="msg-text">
+                                You can change your name in JS section!
+                            </div>
+                        </div>
+                    </div>
+                </main>
+
+                <form class="msger-inputarea">
+                    <input type="text" class="msger-input" placeholder="Enter your message...">
+                    <button type="submit" class="msger-send-btn">Send</button>
+                </form>
+            </div>
+            <!-- Chat ends here -->
 
             <!-- Tab panes -->
-            <div class="tab-content">
+            <!-- <div class="tab-content">
                 <div class="tab-pane active" id="home">
                     <h4>Home Panel Content</h4>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem iure quos cum, saepe reprehenderit minima quasi architecto numquam nesciunt dicta. Qui excepturi recusandae vitae maiores, inventore sequi? Rerum, odio omnis.</p>
@@ -223,7 +280,7 @@
                     <h4>Settings Panel</h4>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima possimus sed odit iste vitae, magnam amet illum laudantium ea! Fugiat consectetur consequuntur qui eos obcaecati sequi ipsam repellat vero voluptate.</p>
                 </div>
-            </div>
+            </div> -->
 
         </div>
     </div>
@@ -247,6 +304,7 @@
     <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.6/lib/darkmode-js.min.js"></script>
 
     <script src="./Js/matches.js"></script>
+    <script src="./Js/chat.js"></script>
 </body>
 
 </html>

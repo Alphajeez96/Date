@@ -75,9 +75,12 @@
     div.scroll {
         /* background-color: green; */
         background: linear-gradient(146.83deg, #F88584 31.37%, #FEAB3C 96.43%);
-        width: ;
         height: 500px;
         overflow: auto;
+    }
+    
+    .contents {
+        cursor: pointer;
     }
     /* Loader */
     
