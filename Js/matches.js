@@ -112,7 +112,7 @@ images.forEach((e, i) => e.addEventListener('click', a => {
 
     // .innerHTML = a.bubbles;
     // Listen to clik even then create chat view from chat history stored in data returned
-    //put chat script here
+    //put chat script right here
 
     console.log(a, i)
 }))
