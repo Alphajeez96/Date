@@ -1,11 +1,11 @@
 // Toggle nav menu here
-let toggle = document.querySelector('#toggle'),
-    menubar = document.querySelector('#menu');
+// let toggle = document.querySelector('#toggle'),
+//     menubar = document.querySelector('#menu');
 
-toggle.addEventListener('click', function(e) {
-    e.preventDefault();
-    menubar.classList.contains('hidden') ? menubar.classList.remove('hidden') : menubar.classList.add('hidden');
-});
+// toggle.addEventListener('click', function(e) {
+//     e.preventDefault();
+//     menubar.classList.contains('hidden') ? menubar.classList.remove('hidden') : menubar.classList.add('hidden');
+// });
 
 
 //Modal togglers here
