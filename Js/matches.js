@@ -30,26 +30,30 @@ const suggestions = [{
         name: "Janet Doe",
         address: "24, Arizona",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. At vitae, at scelerisque scelerisque morbi.",
-        src: './Assets/Vectors/Ellipse 23.jpg'
+        src: './Assets/Vectors/Ellipse 23.jpg',
+        id: 1
     },
     {
         name: "Brianna Doe",
         address: "24, Arizona",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. At vitae, at scelerisque scelerisque morbi.",
-        src: './Assets/Vectors/Ellipse 22.png'
+        src: './Assets/Vectors/Ellipse 22.png',
+        id: 2
 
     },
     {
         name: "Brian Doe",
         address: "24, Arizona",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. At vitae, at scelerisque scelerisque morbi.",
-        src: './Assets/Vectors/Ellipse 25.png'
+        src: './Assets/Vectors/Ellipse 25.png',
+        id: 3
     },
     {
         name: "John Doe",
         address: "24, Arizona",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. At vitae, at scelerisque scelerisque morbi.",
-        src: './Assets/Vectors/Ellipse 23.jpg'
+        src: './Assets/Vectors/Ellipse 23.jpg',
+        id: 4
     }
 ];
 
@@ -68,5 +72,32 @@ document.querySelector('.contents')
             </div>
         </div>
      </div>
-</div>`, ''
-    );
+</div>`, '');
+
+const images = [];
+
+const mountImages = () => {
+    let menu = document.querySelector('.menu')
+    suggestions.forEach(e => {
+        const me = document.createElement('div')
+        me.classList.add('order2')
+        me.innerHTML = `
+        <div>
+        <img src='${e.src}'>
+        </div>
+        <div class='choose'>
+        <h3>${e.name}</h3>
+        <h3>${e.address}</h3>
+        </div>
+        `
+        menu.appendChild(me);
+
+        images.push(me)
+    })
+    console.log(images)
+}
+mountImages();
+
+images.forEach((e, i) => e.addEventListener('click', a => {
+    console.log(a, i)
+}))
