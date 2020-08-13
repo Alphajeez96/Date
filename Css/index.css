@@ -90,12 +90,37 @@ header {
     background: linear-gradient(90deg, rgba(248, 133, 132, 0.75) 0%, rgba(254, 171, 60, 0.75) 100%);
 }
 
+.why__us h3 {
+    font-family: var(--primary-font);
+    font-weight: 500;
+}
+
+.why__description {
+    font-family: var(--nunito-font);
+}
+
+
+/* Newsletter here */
+
+.newsletter h3 {
+    font-family: var(--primary-font);
+    font-weight: 500;
+}
+
+.join {
+    font-family: var(--nunito-font);
+}
+
 
 /* footer here */
 
-footer {
+.foot {
     background: #393E46;
-    height: 5vh;
+}
+
+.alpha {
+    font-family: var(--nunito-font);
+    font-size: 16px;
 }
 
 
