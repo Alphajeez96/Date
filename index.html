@@ -211,9 +211,12 @@
 
         <div class="flex justify-evenly mt-3">
             <div class="text-gray-700 text-center px-4 py-2 m-2">
-                <form class=" rounded">
-                    <div class="mb-4">
-                        <input class="shadow appearance-none border rounded w-full py-2 px-12 text-gray-700 leading-tight focus:outline-none " id="username" type="email" placeholder="">
+                <form method="POST" action="#">
+                    <div class="mb-4 flex  justify-around">
+                        <input class="appearance-none border border-black news__input w-full py-2 px-10 text-gray-700 leading-tight focus:outline-none " id="username" type="email" placeholder="">
+                        <button type="submit" class="text-white mx-3 subscribe py-2 px-4 ">
+                            subscribe
+                          </button>
                     </div>
 
                 </form>
@@ -226,10 +229,11 @@
     </section>
 
     <!-- footer here -->
-    <section class="mt-24 py-3 foot">
+    <section class="mt-24 py-3 lg:px-24 foot">
         <footer>
-            <div class="flex justify-start text-white pt-3 alpha px-24">
+            <div class="flex flex-row text-white pt-3 alpha ">
                 <p>Made with ❤️ by Alphajeez</p>
+
             </div>
 
             <!-- <div class="flex justify-end px-24">
