@@ -32,7 +32,9 @@ const suggestions = [{
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. At vitae, at scelerisque scelerisque morbi.",
         src: './Assets/Vectors/Ellipse 23.jpg',
         id: 1,
-        chat: 'I have heard 1'
+        chat1: 'So what are your fantasies?',
+        chat2: 'A MacBook pro, a nice Mercedes and a chance to work on this 😍'
+
     },
     {
         name: "Brianna Doe",
@@ -40,7 +42,8 @@ const suggestions = [{
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. At vitae, at scelerisque scelerisque morbi.",
         src: './Assets/Vectors/Ellipse 22.png',
         id: 2,
-        chat: 'I have heard 2'
+        chat1: 'Hello Brianna Nice to meet you',
+        chat2: 'Hi, the pleasure is all mine Alpha'
 
     },
     {
@@ -49,7 +52,8 @@ const suggestions = [{
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. At vitae, at scelerisque scelerisque morbi.",
         src: './Assets/Vectors/Ellipse 25.png',
         id: 3,
-        chat: 'I have heard 3'
+        chat1: 'Hello Brian, you free for a cup of coffee later today?',
+        chat2: 'Sure, do give me a call when you ready'
     },
     {
         name: "John Doe",
@@ -57,7 +61,8 @@ const suggestions = [{
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. At vitae, at scelerisque scelerisque morbi.",
         src: './Assets/Vectors/Ellipse 23.jpg',
         id: 4,
-        chat: 'I have heard 4'
+        chat1: 'Hello Janet This is Chat 4',
+        chat2: 'Hi, the pleasure is all mine Chat 4'
     }
 ];
 
