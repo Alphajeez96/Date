@@ -99,7 +99,20 @@ const mountImages = () => {
 mountImages();
 
 images.forEach((e, i) => e.addEventListener('click', a => {
-    document.getElementById('chathistory').innerHTML = a.bubbles;
+    let select = document.querySelector('#chathistory')
+    const chatter = document.createElement('div')
+    chatter.innerHTML = ` <div>
+    <ul>
+    <li>${a.bubbles}</li>
+    <li>${a.clientX}</li>
+    
+    </ul>
+    </div>`
+    select.appendChild(chatter)
 
-    console.log(a)
+    // .innerHTML = a.bubbles;
+    // Listen to clik even then create chat view from chat history stored in data returned
+    //put chat script here
+
+    console.log(a, i)
 }))
