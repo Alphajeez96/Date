@@ -99,5 +99,7 @@ const mountImages = () => {
 mountImages();
 
 images.forEach((e, i) => e.addEventListener('click', a => {
-    console.log(a, i)
+    document.getElementById('chathistory').innerHTML = a.bubbles;
+
+    console.log(a)
 }))
