@@ -84,8 +84,8 @@ const chats = [];
 const mountchats = () => {
     let menu = document.querySelector('.contents')
     suggestions.forEach(e => {
+        const t = suggestions
         const me = document.createElement('div')
-        me.classList.add('order2')
         me.innerHTML = `<div class="container justify-end flex">
         <div class="  w-3/4 mx-4 bg-white shadow-lg rounded-lg overflow-hidden">
         <div class="sm:flex sm:items-center px-6 py-5">
@@ -109,25 +109,17 @@ const mountchats = () => {
 mountchats();
 
 chats.forEach((e, i) => e.addEventListener('click', a => {
-    let selected = document.querySelector('#chathistory')
-    const chatter = document.createElement('div')
-    chatter.innerHTML = ` <div>
-    <ul>
-    <li>${a.bubbles}</li>
-    <li>${a.clientX}</li>
-    
-    </ul>
-    </div>`
-    selected.appendChild(chatter)
 
     let chatView = document.querySelector('.msger')
-    const individualChat = document.createElement('div')
-    individualChat.innerHTML = `         <div class="msger-header">
+        // const individualChat = document.createElement('div')
+        //check if index in loop is same as index from initial array
+
+    chatView.innerHTML = `  <div class="msger-header">
     <div class="msger-header-title">
-        <i class="fas fa-comment-alt"> ${getFormattedDate(new Date())}</i>
+        <i class="date px-2 py-1"> ${getFormattedDate(new Date())}</i>
     </div>
     <div class="msger-header-options">
-        <span><i class="fas fa-cog"></i></span>
+        <span><i class="fas fa-cog"></i></span> ${e.chat}
     </div>
 </div>
 
@@ -221,14 +213,35 @@ chats.forEach((e, i) => e.addEventListener('click', a => {
         </button>
     </div>
 </form>`
-    chatView.appendChild(individualChat)
+
+
+
+    // let selected = document.querySelector('#chathistory')
+    // const chatter = document.createElement('div')
+    // chatter.innerHTML = ` <div>
+    // <ul>
+    // <li>${a.bubbles}</li>
+    // <li>${a.clientX}</li>
+
+    // </ul>
+    // </div>`
+    // selected.appendChild(chatter)
+
 
     // .innerHTML = a.bubbles;
     // Listen to clik even then create chat view from chat history stored in data returned
     //put chat script right here
 
     console.log(a, i)
+    console.log('this is me' + i)
 }))
+
+const displayChat = () => {
+
+    // chatView.appendChild(individualChat)
+
+
+}
 
 function getFormattedDate(date) {
     var year = date.getFullYear();

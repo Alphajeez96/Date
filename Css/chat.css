@@ -144,22 +144,16 @@
     font-size: 1em;
 }
 
+.date {
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    font-style: normal;
+}
+
 .msger-input {
     flex: 1;
     background: var(--body-bg);
-}
-
-.msger-send-btn {
-    margin-left: 10px;
-    background: rgb(0, 196, 65);
-    color: #fff;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background 0.23s;
-}
-
-.msger-send-btn:hover {
-    background: rgb(0, 180, 50);
 }
 
 div .chat__scroll {
