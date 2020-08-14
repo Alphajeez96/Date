@@ -115,7 +115,7 @@ const mountchats = () => {
 <div class="msg-info-time flex justify-start">12:45</div>
 
 <div class="msg right-msg pt-5">
-    <div class="msg-img" style="background-image: url(https://image.flaticon.com/icons/svg/145/145867.svg)"></div>
+    <div class="msg-img" style="background-image: url('./Assets/Vectors/Ellipse 28.png')"></div>
 
     <div class="msg-bubble">
         <div class="msg-info">
