@@ -73,11 +73,22 @@ header {
     border-radius: 10px;
 }
 
-.user__name {}
+.user__name {
+    color: var(--primary-font-color);
+    font-weight: bold;
+    font-family: var(--nunito-font);
+}
 
-.user__address {}
+.user__address {
+    color: #A0A8B5;
+    font-family: var(--nunito-font);
+}
 
-.user__description {}
+.user__description {
+    color: var(--primary-font-color);
+    font-weight: bold;
+    font-family: var(--nunito-font);
+}
 
 .short__list {
     background: rgba(60, 254, 242, 0.4);
