@@ -1,11 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Infant:wght@400;500&family=Nunito:wght@300&family=Open+Sans:wght@600&display=swap&family=Katibeh&display=swap');
 :root {
     --body-bg: #fff;
     --msger-bg: #fff;
     --left-msg-bg: #EEEEEE;
     --right-msg-bg: #F98B79;
-    --opensans-font: 'Open Sans', sans-serif;
     --nunito-font: 'Nunito', sans-serif;
-    --primary-font: 'Cormorant Infant', serif;
     --border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
@@ -45,6 +44,13 @@
 }
 
 .msg-text {
+    color: #000;
+    font-size: 12px;
+    font-family: var(--nunito-font);
+    line-height: 15px;
+}
+
+.msg-text-right {
     color: #F7EDED;
     font-size: 12px;
     font-family: var(--nunito-font);
@@ -90,7 +96,7 @@
 
 .msg-bubble {
     max-width: 450px;
-    /* padding: 15px; */
+    padding: 15px;
     border-radius: 25px 0px 15px 25px;
     background: var(--left-msg-bg);
 }
@@ -144,22 +150,16 @@
     font-size: 1em;
 }
 
+.date {
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    font-style: normal;
+}
+
 .msger-input {
     flex: 1;
     background: var(--body-bg);
-}
-
-.msger-send-btn {
-    margin-left: 10px;
-    background: rgb(0, 196, 65);
-    color: #fff;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background 0.23s;
-}
-
-.msger-send-btn:hover {
-    background: rgb(0, 180, 50);
 }
 
 div .chat__scroll {
