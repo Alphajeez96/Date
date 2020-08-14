@@ -2,68 +2,65 @@
 function addDarkmodeWidget() {
     new Darkmode().showWidget();
 }
-window.addEventListener('load', addDarkmodeWidget);
+window.addEventListener("load", addDarkmodeWidget);
 
 // Chat Viewer here
 
 function onTabClick(event) {
-    let activeTabs = document.querySelectorAll('.active');
+    let activeTabs = document.querySelectorAll(".active");
 
-    // deactivate existing active tab and panel 
+    // deactivate existing active tab and panel
     activeTabs.forEach(function(tab) {
-        tab.className = tab.className.replace('active', '');
+        tab.className = tab.className.replace("active", "");
     });
 
     // activate new tab and panel
-    event.target.parentElement.className += ' active';
-    document.getElementById(event.target.href.split('#')[1]).className += ' active';
+    event.target.parentElement.className += " active";
+    document.getElementById(event.target.href.split("#")[1]).className +=
+        " active";
 }
 
-const element = document.getElementById('nav-tab');
+const element = document.getElementById("nav-tab");
 
-element.addEventListener('click', onTabClick, false);
-
+element.addEventListener("click", onTabClick, false);
 
 //Chat loops
 const suggestions = [{
-
         name: "Janet Doe",
         address: "24, Arizona",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. At vitae, at scelerisque scelerisque morbi.",
-        src: './Assets/Vectors/Ellipse 23.jpg',
+        src: "./Assets/Vectors/Ellipse 23.jpg",
         id: 1,
-        chat1: 'So what are your fantasies?',
-        chat2: 'A MacBook pro, a nice Mercedes and a chance to work on this 😍'
-
+        chat1: "So what are your fantasies?",
+        chat2: "A MacBook pro, a nice Mercedes and a chance to work on this 😍",
     },
     {
         name: "Brianna Doe",
         address: "24, Arizona",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. At vitae, at scelerisque scelerisque morbi.",
-        src: './Assets/Vectors/Ellipse 22.png',
+        src: "./Assets/Vectors/Ellipse 22.png",
         id: 2,
-        chat1: 'Hello Brianna Nice to meet you',
-        chat2: 'Hi, the pleasure is all mine Alpha'
-
+        chat1: "Hello Brianna here Nice to meet you",
+        chat2: "Hi, the pleasure is all mine. The name is Alpha",
     },
     {
         name: "Brian Doe",
         address: "24, Arizona",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. At vitae, at scelerisque scelerisque morbi.",
-        src: './Assets/Vectors/Ellipse 25.png',
+        src: "./Assets/Vectors/Ellipse 25.png",
         id: 3,
-        chat1: 'Hello Brian, you free for a cup of coffee later today?',
-        chat2: 'Sure, do give me a call when you ready'
+        chat1: "Hello, you free for a cup of coffee later today?",
+        chat2: "Sure, do give me a call when you ready",
     },
     {
         name: "John Doe",
         address: "24, Arizona",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. At vitae, at scelerisque scelerisque morbi.",
-        src: './Assets/Vectors/Ellipse 23.jpg',
+        src: "./Assets/Vectors/Ellipse 23.jpg",
         id: 4,
-        chat1: 'Hello Janet This is Chat 4',
-        chat2: 'Hi, the pleasure is all mine Chat 4'
-    }
+        chat1: "Hello This is Chat 4",
+        chat2: "Hi, the pleasure is all mine Chat 4",
+    },
 ];
 
 //Looping per object
@@ -87,10 +84,9 @@ const suggestions = [{
 // const chats = [];
 
 const mountchats = () => {
-    let menu = document.querySelector('.contents')
-    suggestions.forEach(q => {
-
-        const me = document.createElement('div')
+    let menu = document.querySelector(".contents");
+    suggestions.forEach((q) => {
+        const me = document.createElement("div");
         me.innerHTML = `<div class="container justify-end flex">
         <div class="  w-3/4 mx-4 bg-white shadow-lg rounded-lg overflow-hidden">
         <div class="sm:flex sm:items-center px-6 py-5">
@@ -98,45 +94,46 @@ const mountchats = () => {
             <div class="mt-4 sm:mt-0 sm:ml-4 text-center sm:text-left">
                 <p class="text-xl  leading-tight">${q.name}</p>
                 <p class="text-sm pt-2 leading-tight text-gray-600">${q.address}</p>
-                <p class="text-sm leading-tight pt-2 ">${q  .description}</p>
+                <p class="text-sm leading-tight pt-2 ">${q.description}</p>
             </div>
             <div class="mt-4 sm:mt-0 sm:ml-4 text-center sm:text-left">
             </div>
         </div>
      </div>
-</div>`
+</div>`;
         menu.appendChild(me);
-        me.addEventListener('click', a => {
 
-            let chatView = document.querySelector('.msger')
-                // const individualChat = document.createElement('div')
-                //check if index in loop is same as index from initial array
+        me.addEventListener("click", (a) => {
+            let chatView = document.querySelector(".msger");
             chatView.innerHTML = `  <div class="msger-header">
 <div class="msger-header-title">
     <i class="date px-2 py-1"> ${getFormattedDate(new Date())}</i>
 </div>
 <div class="msger-header-options">
-    <span><i class="fas fa-cog"></i></span> ${q.chat}
+   
 </div>
 </div>
 
 <main class="msger-chat">
-<div class="msg left-msg">
-    <div class="msg-img" style="background-image: url(https://image.flaticon.com/icons/svg/327/327779.svg)"></div>
+<div class="msg left-msg pt-2">
+    <div class="msg-img" style="background-image: url('${q.src}')"></div>
 
     <div class="msg-bubble">
         <div class="msg-info">
-            <!-- <div class="msg-info-name">BOT</div>
-            <div class="msg-info-time">12:45</div> -->
+        <div class="msg-info-name"></div>
+
         </div>
 
         <div class="msg-text">
-            Hi, welcome to SimpleChat! Go ahead and send me a message. 😄
+        ${q.chat1}
         </div>
+        
     </div>
+   
 </div>
+<div class="msg-info-time flex justify-start">12:45</div>
 
-<div class="msg right-msg">
+<div class="msg right-msg pt-5">
     <div class="msg-img" style="background-image: url(https://image.flaticon.com/icons/svg/145/145867.svg)"></div>
 
     <div class="msg-bubble">
@@ -145,11 +142,12 @@ const mountchats = () => {
             <!-- <div class="msg-info-time">12:46</div> -->
         </div>
 
-        <div class="msg-text">
-            You can change your name in JS section!
+        <div class="msg-text-right">
+        ${q.chat2}
         </div>
     </div>
 </div>
+<div class="msg-info-time flex justify-end">12:45</div>
 </main>
 
 <form class="msger-inputarea">
@@ -209,33 +207,25 @@ const mountchats = () => {
         </svg>
     </button>
 </div>
-</form>`
-
-
-        })
-
-
-    })
-
-}
+</form>`;
+        });
+    });
+};
 mountchats();
 
-
 const displayChat = () => {
-
     // chatView.appendChild(individualChat)
+};
 
-
-}
-
+// Date formatter here
 function getFormattedDate(date) {
     var year = date.getFullYear();
 
     var month = (1 + date.getMonth()).toString();
-    month = month.length > 1 ? month : '0' + month;
+    month = month.length > 1 ? month : "0" + month;
 
     var day = date.getDate().toString();
-    day = day.length > 1 ? day : '0' + day;
+    day = day.length > 1 ? day : "0" + day;
 
-    return month + '/' + day + '/' + year;
+    return month + "-" + day + "-" + year;
 }
