@@ -67,7 +67,7 @@ const mountchats = () => {
     suggestions.forEach((q) => {
         const me = document.createElement("div");
         me.innerHTML = `<div class="container justify-end flex">
-        <div class="  w-3/4 mx-4 bg-white user__card hover:shadow-lg rounded-lg overflow-hidden">
+        <div class="  w-3/4 mx-2 bg-white user__card hover:shadow-lg rounded-lg overflow-hidden">
         <div class="sm:flex sm:items-center px-6 py-5">
             <img class="block mx-auto sm:mx-0 sm:flex-shrink-0 rounded-full" src='${q.src}' alt="Woman's Face">
             <div class="mt-4 sm:mt-0 sm:ml-4 text-center sm:text-left">
