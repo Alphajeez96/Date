@@ -4,27 +4,7 @@ function addDarkmodeWidget() {
 }
 window.addEventListener("load", addDarkmodeWidget);
 
-// Chat Viewer here
-
-function onTabClick(event) {
-    let activeTabs = document.querySelectorAll(".active");
-
-    // deactivate existing active tab and panel
-    activeTabs.forEach(function(tab) {
-        tab.className = tab.className.replace("active", "");
-    });
-
-    // activate new tab and panel
-    event.target.parentElement.className += " active";
-    document.getElementById(event.target.href.split("#")[1]).className +=
-        " active";
-}
-
-const element = document.getElementById("nav-tab");
-
-element.addEventListener("click", onTabClick, false);
-
-//Chat loops
+//User Data
 const suggestions = [{
         name: "Janet Doe",
         address: "24, Arizona",
@@ -81,8 +61,7 @@ const suggestions = [{
 //      </div>
 // </div>`, '');
 
-// const chats = [];
-
+//Loop through arraya and create elements
 const mountchats = () => {
     let menu = document.querySelector(".contents");
     suggestions.forEach((q) => {
@@ -101,6 +80,7 @@ const mountchats = () => {
         </div>
      </div>
 </div>`;
+
         menu.appendChild(me);
 
         me.addEventListener("click", (a) => {

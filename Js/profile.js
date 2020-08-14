@@ -69,9 +69,9 @@ document.querySelector('.content')
             <div class="sm:flex sm:items-center px-6 py-5">
                 <img class="block mx-auto sm:mx-0 sm:flex-shrink-0 rounded-full" src='${sg.src}' alt="Woman's Face">
                 <div class="mt-4 sm:mt-0 sm:ml-4 text-center sm:text-left">
-                    <p class="text-xl  leading-tight">${sg.name}</p>
-                    <p class="text-sm pt-2 leading-tight text-gray-600">${sg.address}</p>
-                    <p class="text-sm leading-tight pt-2 ">${sg.description}</p>
+                    <p class="text-xl user__name leading-tight">${sg.name}</p>
+                    <p class="text-sm user__address pt-2 leading-tight text-gray-600">${sg.address}</p>
+                    <p class="text-sm user__description leading-tight pt-2 ">${sg.description}</p>
                 </div>
 
                 <div class="mt-4 sm:mt-0 sm:ml-4 text-center sm:text-left">
