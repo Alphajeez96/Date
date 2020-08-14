@@ -170,7 +170,7 @@ const mountchats = () => {
         </svg>
     </button>
 
-    <button type="submit" class="rounded mx-2">
+    <button type="button" class="rounded mx-2">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 19 18"
             fill="none">
             <path
