@@ -21,7 +21,7 @@ There is a navigation menu at the top of the page.<br />
 Yo can access the different sections by clicking on the nav bar, or scrolling down.
 
 
-![Nav bar](https://raw.githubusercontent.com/Alphajeez96/HNG_Hotel/master/imgs/palmView.jpg)
+![Nav bar](https://raw.githubusercontent.com/Alphajeez96/Date/master/Assets/General/Screenshot_1.png)
 
 
 There are several sections with information.
