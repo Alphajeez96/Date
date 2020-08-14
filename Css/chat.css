@@ -1,11 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Infant:wght@400;500&family=Nunito:wght@300&family=Open+Sans:wght@600&display=swap&family=Katibeh&display=swap');
 :root {
     --body-bg: #fff;
     --msger-bg: #fff;
     --left-msg-bg: #EEEEEE;
     --right-msg-bg: #F98B79;
-    --opensans-font: 'Open Sans', sans-serif;
     --nunito-font: 'Nunito', sans-serif;
-    --primary-font: 'Cormorant Infant', serif;
     --border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
