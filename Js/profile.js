@@ -65,7 +65,7 @@ const suggestions = [{
 document.querySelector('.content')
     .innerHTML = suggestions.reduce((a, sg) => a +=
         `<div class="container">
-        <div class=" w-1/2 mx-auto bg-white shadow-lg rounded-lg overflow-hidden">
+        <div class=" w-1/2 mx-auto bg-white user__card hover:shadow-lg rounded-lg overflow-hidden">
             <div class="sm:flex sm:items-center px-6 py-5">
                 <img class="block mx-auto sm:mx-0 sm:flex-shrink-0 rounded-full" src='${sg.src}' alt="Woman's Face">
                 <div class="mt-4 sm:mt-0 sm:ml-4 text-center sm:text-left">
