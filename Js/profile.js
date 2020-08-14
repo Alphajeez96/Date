@@ -2,69 +2,39 @@
 function addDarkmodeWidget() {
     new Darkmode().showWidget();
 }
-window.addEventListener('load', addDarkmodeWidget);
+window.addEventListener("load", addDarkmodeWidget);
 
-// loader
-
-const cardImage = document.querySelector('.card-image');
-const cardTitle = document.querySelector('.card-title');
-const cardDesc = document.querySelector('.card-description');
-
-
-const renderCard = () => {
-    cardTitle.textContent = 'Card Title Yo!';
-    cardDesc.textContent = 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero dicta repellat quibusdam assumenda at distinctio similique eos? Officiis voluptatem accusamus, id odit, quos eaque nemo, dicta quidem eum eligendi veritatis.';
-    createImage();
-    cardTitle.classList.remove('loading');
-    cardDesc.classList.remove('loading');
-    cardImage.classList.remove('loading');
-};
-
-function createImage() {
-    const img = new Image();
-    img.classList.add("image");
-    img.setAttribute('alt', 'A cloud day at a mountain base');
-    img.setAttribute('src', '  https://images.unsplash.com/photo-1516646255117-f9f933680173?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=dc874984018a4253ba7d2a3c53387135 ');
-    cardImage.appendChild(img);
-}
-
-setTimeout(() => {
-    renderCard();
-}, 5000);
-
-
-//Chat loops
+//Profile Data
 const suggestions = [{
-
         name: "Janet Doe",
         address: "24, Arizona",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. At vitae, at scelerisque scelerisque morbi.",
-        src: './Assets/Vectors/Ellipse 23.jpg'
+        src: "./Assets/Vectors/Ellipse 23.jpg",
     },
     {
         name: "Brianna Doe",
         address: "24, Arizona",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. At vitae, at scelerisque scelerisque morbi.",
-        src: './Assets/Vectors/Ellipse 22.png'
-
+        src: "./Assets/Vectors/Ellipse 22.png",
     },
     {
         name: "Brian Doe",
         address: "24, Arizona",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. At vitae, at scelerisque scelerisque morbi.",
-        src: './Assets/Vectors/Ellipse 25.png'
+        src: "./Assets/Vectors/Ellipse 25.png",
     },
     {
         name: "John Doe",
         address: "24, Arizona",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. At vitae, at scelerisque scelerisque morbi.",
-        src: './Assets/Vectors/Ellipse 23.jpg'
-    }
+        src: "./Assets/Vectors/Ellipse 23.jpg",
+    },
 ];
 
-document.querySelector('.content')
-    .innerHTML = suggestions.reduce((a, sg) => a +=
-        `<div class="container">
+//Loop and sisplay info on card
+document.querySelector(".content").innerHTML = suggestions.reduce(
+    (a, sg) =>
+    (a += `<div class="container">
         <div class=" w-1/2 mx-auto bg-white user__card hover:shadow-lg rounded-lg overflow-hidden">
             <div class="sm:flex sm:items-center px-6 py-5">
                 <img class="block mx-auto sm:mx-0 sm:flex-shrink-0 rounded-full" src='${sg.src}' alt="Woman's Face">
@@ -105,42 +75,39 @@ document.querySelector('.content')
                 </div>
             </div>
         </div>
-    </div>`, ''
-    );
+    </div>`),
+    ""
+);
 
+// Handle alerts here
 const reject = () => {
     swal({
-            title: "Are you sure?",
-            text: "Once discarded, you will not be able to recover this!",
-            icon: "warning",
-            buttons: ["Cancel", "Reject"],
-            dangerMode: true,
-        })
-        .then((willDelete) => {
-            if (willDelete) {
-                swal("Possible Match has been Discarded!", {
-                    icon: "success",
-                });
-            } else {
-
-            }
-        });
-}
+        title: "Are you sure?",
+        text: "Once discarded, you will not be able to recover this!",
+        icon: "warning",
+        buttons: ["Cancel", "Reject"],
+        dangerMode: true,
+    }).then((willDelete) => {
+        if (willDelete) {
+            swal("Possible Match has been Discarded!", {
+                icon: "success",
+            });
+        } else {}
+    });
+};
 
 const favorite = () => {
     swal({
         title: "Success!",
         text: "Match added to favorites",
         icon: "success",
-
     });
-}
+};
 
 const shortlist = () => {
     swal({
         title: "Success!",
         text: "Match added to shortlist",
         icon: "success",
-
     });
-}
+};
