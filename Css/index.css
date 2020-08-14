@@ -75,6 +75,11 @@ header {
 
 /* How it works */
 
+.how__it__works {
+    background: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22111%22%20height%3D%22322%22%20viewBox%3D%220%200%20111%20322%22%20fill%3D%22none%22%3E%0A%3Ccircle%20cx%3D%22-50%22%20cy%3D%22161%22%20r%3D%22161%22%20fill%3D%22%23FEAB3C%22%20fill-opacity%3D%220.15%22%2F%3E%0A%3C%2Fsvg%3E');
+    background-repeat: no-repeat;
+}
+
 .how__it__works h3 {
     background: -webkit-linear-gradient(#ff3372, #feab3c);
     -webkit-background-clip: text;
